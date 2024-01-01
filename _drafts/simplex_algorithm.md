@@ -21,6 +21,7 @@ Outline:
     - There might be m constraints, but you're really working with a convex shape bounded by m + n planes.
     - Each variable represents some notion of "how far you are from that plane", or "how far you are from making that constraint tight"
     - To begin with, the n main variables are all 0: corresponding to the fact that you're at distance 0 from those planes
+    - And at any point, the set of variables that are set to 0 at any point should form a basis for our linear space
 - Structure of the Simplex Algorithm
     - Two phases: finding a feasible point and optimizing the feasible point
         - They're equally hard problems
