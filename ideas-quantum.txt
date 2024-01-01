@@ -1,0 +1,3 @@
+my thoughts on the codeforces q# contests...
+
+I was a TA for the undergraduate quantum computing class at my university.

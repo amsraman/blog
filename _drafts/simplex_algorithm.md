@@ -1,0 +1,46 @@
+---
+layout: post
+title: The Simplex Algorithm in less than 70 lines
+---
+Outline:
+- Motivation
+    - Most online resources either don't spend time explaining why things work, have long/unreadable code, or both
+    - Theorists don't bother describing the algorithm beyond a few sentences, and engineers don't seem to understand how to intuit any of the steps
+    - This is my attempt at justifying every step of the Simplex Algorithm in a direct and implementable way
+- Overview of Linear Programming
+    - Maximize c^T x s.t. Ax <= b
+    - n variables, m constraints
+    - Meaning of feasible, bounded
+- So... how do you solve it
+    - Central claim 1: there will always exist an optimal solution at a vertex
+        - Proof: If x is not a vertex, there will always exist some (perhaps very tiny) vector v such that x + v and x - v are both feasible points. At least one of them has to not be worse
+    - Central claim 2: as long as there is another vertex with higher objective, there exists a variable such that increasing it will directly increase your objective
+        - Proof: at least one addend must be positive (split the sum and stuff)
+    - So, the following works: 
+- Introducing m variables
+    - There might be m constraints, but you're really working with a convex shape bounded by m + n planes.
+    - Each variable represents some notion of "how far you are from that plane", or "how far you are from making that constraint tight"
+    - To begin with, the n main variables are all 0: corresponding to the fact that you're at distance 0 from those planes
+- Structure of the Simplex Algorithm
+    - Two phases: finding a feasible point and optimizing the feasible point
+        - They're equally hard problems
+    - At any given point, we will be at some vertex: meaning we are at the intersection of some n of our m + n planes.
+    - Each of these planes corresponds to a variable: these variables will all be 0, and will form a basis of $R^n$. So, we call them "basic" variables.
+- Math behind the pivot operation
+    - pivot(x, y): Take the variable x, and keep increasing it until the constraint corresponding to y is tight
+    - You're restating the same problem in terms of a different set of variables
+        - You have to update A, B, and C
+    - First, write x in terms of the other variables and y
+    - Then, take every instance of x, and replace it with this equivalent expression
+    - You'll end up with some constants, remove them add them to your running objective
+    - In the end, your program should be restating the same problem but in terms of your new set of variables
+- Complexity
+    - Provide a bad case
+    - O(m + n choose n) pivots
+- Implementation
+    - Just paste code basically
+    - Explain details
+- Epilogue
+    - More optimizations are possible
+    - Why is it called simplex?
+        - because you're continually finding an "optimal simplex", and traveling along it. or idk
