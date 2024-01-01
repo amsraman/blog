@@ -3,7 +3,7 @@ layout: post
 title: "Happy New Year!"
 ---
 
-> "Gee, I wonder why he _just_ decided to start a blog..."  
+> "Gee, I wonder why he **just** decided to start a blog..."  
 
 Jokes aside, welcome! I'm amsraman: a college student with a love of all things math, and the algorithmic/theoretical side of CS. These interests of mine are going to be the primary subject of this blog, although this might expand if I'm feeling it later on.
 
@@ -31,7 +31,7 @@ As my time in college caught up to me, I've started asking questions. Why do I d
 
 What I always liked about math was the unexpected results: the facts that you don't expect to be true, or the distinct concepts that you don't expect to be connected... until you look a little closer. A closer look that unearths a larger picture, and makes you wonder how you didn't see it that way the whole time.
 
-In a sense, that's also what I've come to enjoy most about studying algorithms: the [simplifications you don't expect to work][flow integrality], or the [strategies you don't expect to be fast enough][splay tree]... but somehow just are. Or the algorithms that you [think][spanning tree] [are different][xor basis], but are actually doing the [same thing][matroids] in different domains.
+In a sense, that's also what I've come to enjoy most about studying algorithms: the [simplifications you don't expect to work][flow integrality], or the [strategies you don't expect to be fast enough][splay tree]... but somehow just are. Or the algorithms that you [think][spanning tree] [are different][xor basis], but are actually doing the [same thing][matroid] in different domains.
 
 The kinds of problems that can are seen in contests are often easily conducive to this kind of thinking, even if I'm not directly competing. And, perhaps in the same vain, resources intended for competitive programmers often contain some of the cleanest and most concise explanations / implementations of otherwise pretty hard-to-describe algorithms that you'll find on the internet. I guess that's what's kept me coming back.
 
